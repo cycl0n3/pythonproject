@@ -107,3 +107,19 @@ mo3 = batRegex.search('The Adventures of Batman')
 print(mo3)
 
 print('-'*20)
+
+haRegex = re.compile(r'(Ha){3}')
+mo1 = haRegex.search('HaHaHa')
+print(mo1.group())
+mo2 = haRegex.search('Ha')
+print(mo2)
+
+print('-'*20)
+
+greedyHaRegex = re.compile(r'(Ha){3,5}')
+mo1 = greedyHaRegex.search('HaHaHaHaHa')
+print(mo1.group())
+
+nonGreedyHaRegex = re.compile(r'(Ha){3,5}?')
+mo1 = nonGreedyHaRegex.search('HaHaHaHaHa')
+print(mo1.group())
