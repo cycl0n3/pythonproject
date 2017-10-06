@@ -25,5 +25,26 @@ print(totalSize)
 
 print('-'*20)
 
-helloFile = open('hello.txt', 'r')
+helloFile = open('data/hello.txt', 'r')
+helloContent = helloFile.read()
+print(helloContent)
+helloFile.close()
 
+sonnetFile = open('data/sonnet29.txt')
+# print(sonnetFile.readlines())
+print([line[:-1] for line in sonnetFile])
+sonnetFile.close()
+
+print('-'*20)
+
+baconFile = open('data/bacon.txt', 'w')
+baconFile.write('Hello World!\n')
+baconFile.close()
+
+baconFile = open('data/bacon.txt', 'a')
+baconFile.write('Bacon is not a vegetable.')
+baconFile.close()
+
+baconFile = open('data/bacon.txt')
+content = baconFile.read()
+print(content)
