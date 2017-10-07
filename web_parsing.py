@@ -1,3 +1,5 @@
+import requests
+import webbrowser
 import bs4
 
 
@@ -31,3 +33,12 @@ print(str(spanElem))
 print(spanElem.get('id'))
 print(spanElem.get('some_nonexistent_addr'))
 print(spanElem.attrs)
+
+res = requests.get('https://google.com/search?q=Blindspot tv series')
+res.raise_for_status()
+soup = bs4.BeautifulSoup(res.text, "html5lib")
+linkElems = soup.select('.r a')
+numOpen = min(1, len(linkElems))
+
+for i in range(numOpen):
+    webbrowser.open('https://google.com' + linkElems[i].get('href'))
