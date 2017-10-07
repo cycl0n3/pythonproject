@@ -23,3 +23,11 @@ print(str(pElems[1]))
 print(pElems[1].getText())
 print(str(pElems[2]))
 print(pElems[2].getText())
+
+print('-'*20)
+
+spanElem = exampleSoup.select('span')[0]
+print(str(spanElem))
+print(spanElem.get('id'))
+print(spanElem.get('some_nonexistent_addr'))
+print(spanElem.attrs)
