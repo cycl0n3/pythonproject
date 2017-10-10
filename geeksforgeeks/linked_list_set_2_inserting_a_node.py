@@ -10,6 +10,7 @@ class LinkedList(object):
 
     def printList(self):
         temp = self.head
+
         while temp:
             print(temp.data)
             temp = temp.next
@@ -17,6 +18,7 @@ class LinkedList(object):
     def push(self, new_data):
         new_node = Node(new_data)
         new_node.next = self.head
+
         self.head = new_node
 
     def insertAfter(self, prev_node, new_data):
