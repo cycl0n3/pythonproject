@@ -42,3 +42,18 @@ class LinkedList(object):
             return
 
         prev.next = temp.next
+
+
+if __name__ == '__main__':
+    list = LinkedList()
+
+    list.push(7)
+    list.push(1)
+    list.push(3)
+    list.push(2)
+
+    print("Created Linked List: ")
+    list.printList()
+    list.deleteNode(1)
+    print("Linked List after Deletion of 1:")
+    list.printList()
