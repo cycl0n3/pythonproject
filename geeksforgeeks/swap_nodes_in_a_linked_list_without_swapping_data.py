@@ -21,6 +21,17 @@ class LinkedList(object):
 
         self.head = new_node
 
+    def swapNodes(self, x, y):
+        if x == y:
+            return
+
+        prevX = None
+        currX = self.head
+
+        while currX is not None and currX.data != x:
+            prevX = currX
+            currX = currX.next
+
 
 if __name__ == '__main__':
     pass
