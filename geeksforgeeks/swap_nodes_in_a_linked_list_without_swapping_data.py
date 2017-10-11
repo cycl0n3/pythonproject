@@ -56,4 +56,17 @@ class LinkedList(object):
 
 
 if __name__ == '__main__':
-    pass
+    llist = LinkedList()
+
+    llist.push(7)
+    llist.push(6)
+    llist.push(5)
+    llist.push(4)
+    llist.push(3)
+    llist.push(2)
+    llist.push(1)
+    print("Linked list before calling swapNodes() ")
+    llist.printList()
+    llist.swapNodes(4, 3)
+    print("Linked list after calling swapNodes() ")
+    llist.printList()
