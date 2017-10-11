@@ -46,12 +46,12 @@ class LinkedList(object):
 
 
 if __name__ == '__main__':
-    list = LinkedList()
+    llist = LinkedList()
 
-    list.append(6)
-    list.push(7)
-    list.push(1)
-    list.append(4)
-    list.insertAfter(list.head, 8)
-    list.printList()
+    llist.append(6)
+    llist.push(7)
+    llist.push(1)
+    llist.append(4)
+    llist.insertAfter(llist.head, 8)
+    llist.printList()
 

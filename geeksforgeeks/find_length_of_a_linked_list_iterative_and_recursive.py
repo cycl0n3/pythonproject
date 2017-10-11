@@ -39,12 +39,13 @@ class LinkedList(object):
 
 
 if __name__ == '__main__':
-    list = LinkedList()
-    list.push(1)
-    list.push(3)
-    list.push(1)
-    list.push(2)
-    list.push(1)
+    llist = LinkedList()
 
-    print('The count of nodes is: ', list.getCount())
-    print('The count of nodes is: ', list.getCountRec(list.head))
+    llist.push(1)
+    llist.push(3)
+    llist.push(1)
+    llist.push(2)
+    llist.push(1)
+
+    print('The count of nodes is: ', llist.getCount())
+    print('The count of nodes is: ', llist.getCountRec(llist.head))

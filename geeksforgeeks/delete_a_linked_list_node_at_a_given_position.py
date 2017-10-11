@@ -48,17 +48,17 @@ class LinkedList(object):
 
 
 if __name__ == '__main__':
-    list = LinkedList()
+    llist = LinkedList()
 
-    list.push(7)
-    list.push(1)
-    list.push(3)
-    list.push(2)
-    list.push(8)
+    llist.push(7)
+    llist.push(1)
+    llist.push(3)
+    llist.push(2)
+    llist.push(8)
 
     print("Created Linked List: ")
-    list.printList()
-    list.deleteNode(2)
+    llist.printList()
+    llist.deleteNode(2)
 
     print("Linked List after Deletion at position 2: ")
-    list.printList()
+    llist.printList()
