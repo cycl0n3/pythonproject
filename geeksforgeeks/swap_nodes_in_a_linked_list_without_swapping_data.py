@@ -27,10 +27,32 @@ class LinkedList(object):
 
         prevX = None
         currX = self.head
-
         while currX is not None and currX.data != x:
             prevX = currX
             currX = currX.next
+
+        prevY = None
+        currY = self.head
+        while currY is not None and currY.data != y:
+            prevY = currY
+            currY = currY.next
+
+        if currX is None or currY is None:
+            return
+
+        if prevX is not None:
+            prevX.next = currY
+        else:
+            self.head = currY
+
+        if prevY is not None:
+            prevY.next = currX
+        else:
+            self.head = currX
+
+        temp = currX.next
+        currX.next = currY.next
+        currY.next = temp
 
 
 if __name__ == '__main__':
